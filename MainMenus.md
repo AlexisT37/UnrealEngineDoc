@@ -6,32 +6,48 @@
 
 ## Save Level: Save the currently opened level
 
-## Save Level As: Save the currently opened level with a new name or location
+## Open asset: Summon an asset picker
 
-## Save All: Save all unsaved changes in the project, including levels, assets, and configurations
+## Favorite Levels: Add a level to the favorites, or select a favorite
 
-## Choose Files to Save: Choose specific files or assets to save
+## Recent Levels: Open one of the recently opened levels
 
-## Connect to Source Control: Connect the project to a source control system (e.g., Git, Perforce, SVN) for version control and team collaboration
+## Save current level: save the level (umap)
 
-## Refresh Source Control: Refresh the connection to your source control system, updating the status of files and assets
+## Save current level as: decide the name of your level
 
-## Import: Import assets into your project, such as 3D models, textures, sounds, etc
+## Save all: Save all your unsaved levels and assets to disk
 
-## Export All: Export all assets in the project, including levels and objects
+## Choose file to save: decide what to save
 
-## Build: Build lighting, geometry, and navigation data for your level
+## Import into level: import various types of assets into your current level
 
-## Build and Run: Build your project and run it on a selected platform
+It could be an FBX scene, a Gl transmission format(gltf), Gl transmission format in binary(glb), or materialXFile format(mtlx)
 
-## Cook Content for [Platform]: Prepare the content of your project for a specific platform, such as PC, console, or mobile devices
+## Export all
 
-## Package Project: Package your project into an executable or installable format for distribution
+Export all your content to a file, it could be several formats, such as fbx, lod.obj, obj, stereolitography stl, gltf or glb
 
-## Switch Project: Switch to another Unreal Engine project on your computer
+## Export selected
 
-## New Project: Create a new Unreal Engine project
+Export the selected elements to a file, for instance a selected character in the view
 
-## Open Project: Open an existing Unreal Engine project
+## New Project
 
-## Exit: Close the Unreal Engine editor
+Takes you to the project creation screen, where you can select the options and templates
+
+## Open Project
+
+Open an already existing project
+
+## Zip Project
+
+Zip the current project into a zip file
+
+## Recent projects
+
+Open one of the recent projects
+
+## Exit
+
+Quit the application
