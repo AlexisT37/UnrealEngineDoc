@@ -1,3 +1,5 @@
+# Modes
+
 select
 landscape
 foliage
@@ -6,4 +8,3 @@ modeling
 fracture
 brush editing
 animation
-
