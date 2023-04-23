@@ -2,7 +2,24 @@
 
 ## Level Editor
 
-Cinematics: Access the Sequencer Editor for creating, editing, and managing cinematics, cutscenes, and other time-based animations.
+### Cinematics
+
+Access the Sequencer Editor for creating, editing, and managing cinematics, cutscenes, and other time-based animations.
+
+#### Camera shake previewer
+
+Open the camera shake preview panel
+
+#### Sequencer
+
+#### Take Recorder
+
+Open the main take recorder UI
+
+#### Takes Browser
+
+Open the folder of takes that have been recorded
+
 Content Browser: Open the Content Browser window to manage, import, and organize all assets used in your project, such as textures, materials, models, and blueprints.
 Details: Display the Details panel, which shows the properties and settings of the currently selected object or actor in the level.
 ImgMedia: Access the ImgMedia panel for managing image sequence-based media assets and playback settings.
