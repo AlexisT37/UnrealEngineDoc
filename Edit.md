@@ -21,3 +21,9 @@
 #### delete
 
 ## Configuration
+
+### editor preferences
+
+### project settings
+
+### plugins
