@@ -26,7 +26,7 @@ One other advantage of the Outliner is that with control you can easily select m
 
 Inside the outliner, you can create folders. Note that the folder does not seem to affect the interaction between the items in the game world so far, but we'll make sure about that later.
 
-I made a chair folder and then moved both chairs inside it, it did'n seem to have any effect.
+I made a chair folder and then moved both chairs inside it, it didn't seem to have any effect.
 
 Inside the Outliner, you can click on the little eye on the left to hide and unhide objects, which is very useful when you want to get one object out of the way to get a clear view of some perspective without impacting the said object. Then, you can unhide it and move on.
 
