@@ -69,3 +69,18 @@ the smoothness is really nice because you can see the sky and the clouds reflect
 
 Now we're going to make our material metallic.
 It's the same, a gradient between 0 and 1, and the more you get close to 1, the more metallic it looks.
+PBR is Physically Based Rendering, or PBR.
+These values are clamped to 0 and 1 so if we select negative values or values above 1, it's just going to take it back to 0 or 1.
+Usually for metallic, it's not going to be in between values, it's either going to be 0 or 1.
+
+In the detail of the Unreal engine prop, there are 3 materials, element0, 1, 2, and presumably they all are connected to individual values.
+
+Yes indeed, if we go to the asset drawer and drag our material to 1 or 2 it will replace the color of these sections of the prop by gold.
+Let's take it back to plastic, and then we're going to want to make it so the texture of our prop is not uniform.
+We go to All > Content > Starter Content > textures and we find T_Perlin_Noise_M.
+we drag and drop it to our graph section of our material. In general, to add a texture, we can drag and drop it from the asset drawer, or we also can
+right click anywhere, and search texture sample, and then select the texture of choice.
+You can then connect it to the base color output.
+We then delete the node for the constant value of roughness, and instead we apply the perlin noise to it. This will give a used effect to our material, because the random values of the perlin noise will make it apply differently on the surface of our prop.
+With that, when applied, we get the interesting texture of the perlin noise upon our prop.
+If we go into color mode with alt + 3, we see the simple color map of our objects without the effect of perlin noise or the lighting.
