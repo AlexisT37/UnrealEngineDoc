@@ -60,4 +60,12 @@ Apparently there is something going on with the switch tab button, ctrl + tab, a
 
 Now we are going to edit the roughness channel instead of the color.
 
-Roughness is a value between 0 and 1, for the smoothness of the material. 0 is really rough and 1 really smooth.
+Roughness is a value between 0 and 1, for the smoothness of the material. 0 is really smooth and 1 really rough.
+At first I thought it was the opposite but turns out the reflexion in the sphere made me realize my mistake.
+We search for Constants > Constant1Vector (we can search).
+
+To remove an edge, simply hold Alt and left click on it.
+the smoothness is really nice because you can see the sky and the clouds reflected in the material.
+
+Now we're going to make our material metallic.
+It's the same, a gradient between 0 and 1, and the more you get close to 1, the more metallic it looks.
