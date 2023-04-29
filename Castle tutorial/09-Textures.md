@@ -76,3 +76,5 @@ If we change the color for this, it will affect the tile, and getting it to whit
 Now remember this isn't the whole color changing, it's only some deviation from the orginal brick color, so if we get red then it goes redder, but if we get blue then it becomes some kind of purple.
 
 We're going to make it just a little bit red.
+
+If we make it greenish blue, it remove a little bit of red, which is nice.
