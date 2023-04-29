@@ -84,3 +84,30 @@ You can then connect it to the base color output.
 We then delete the node for the constant value of roughness, and instead we apply the perlin noise to it. This will give a used effect to our material, because the random values of the perlin noise will make it apply differently on the surface of our prop.
 With that, when applied, we get the interesting texture of the perlin noise upon our prop.
 If we go into color mode with alt + 3, we see the simple color map of our objects without the effect of perlin noise or the lighting.
+
+Now we're going to imitate dirt by getting the smudgier area somewhat browner.
+We duplicate the initial color node, and then we're going to apply what's called a Linear Interpolate Node or Lerp (easier to search that)
+This node will direct the application of the color to the black or white sections of the Perlin noise. That means that the clearer areas will look gold, while the darker area, smudgy, will look brown.
+There are shortcuts for the various types of nodes.
+
+1 + left click is scalar one, so just one value
+2 + left click is scalar 2, x and y, so 2 values
+3 + left click is scalar 3, so 3 values like rgb.
+
+Now We have to properly connect the nodes so that we will have the perlin noise effect with dirt.
+The gold is not connected to base color anymore.
+The gold is connected to the Lerp A
+The dirt is connected to the Lerp B
+The Perlin Noise is connected to the Lerp Alpha.
+The Perlin Noise is connected to the Roughness.
+
+That means that the perlin noise is not only connected to the base color but also the roughness, and that the roughness and the color are distributed in parallel. What is white in the perlin noise is Smooth and gold, and what is black is Rough and brown.
+
+Now, instead of lerping between a color and another color, we're going to lerp between color and another texture.
+We're going to select the t_metal_rust.
+If we open the texture inside the content drawer, we don't see anything, that's because the alpha channel covers opacity and it is on, so we need to go to the top bar in the texture view and click on the black on white A in a square and disable it by clicking on it. Then we can see the rust.
+I notice that the edges can't be multiplically connected, which simplifies the possibilities.
+Indeed, I only need to connect the rust to the lerp to have the connection to the brown texture dissapear.
+Now our prop does look like it has dirt on it a little bit better than with the brown color.
+
+Now we got a good basis for the materials.
