@@ -55,3 +55,24 @@ But that is just the scaler, we also need a 1 scalar to set the actual value. To
 In the scalar, if we select 1, we get the normal version, but if we select 0.5, we get something larger.
 
 This is very nice. It's not that easy to see at first but if we go to lower values to get real bigger values, then it's really obvious, it is larger. Let's follow the tutorial at 0.5
+
+## YEAAAAAH I PASSED 1 HOUR
+
+Now we are going to try and add some nodes to the tile graph, and add more parameters.
+
+Let's make some space by selecting several nodes, zooming back, and carrying them to the left ( all but the main node.).
+
+We create another multiply node, and connect the RGB output of the base color into A.
+Then we drag its output into base color of the main node. Remember, don't freak out, this will replace the old edge.
+
+I want to redirect the edge, and make it go into the B of the multiply, not the A.
+I could hit ctrl + z or remove the edge with alt + left click, but I'm going to select some point on the right part of the edge while holding ctrl, that allows me to untie it from its destination and redirect it as I want.
+
+then we add a 3contstant (3 + left click), and we set its default value to white.
+Then, we connect its output to A of the multiply.
+
+Note: when an edge can connect correctly to an input of another node, a little green check is displayed.
+If we change the color for this, it will affect the tile, and getting it to white will bring it back to default.
+Now remember this isn't the whole color changing, it's only some deviation from the orginal brick color, so if we get red then it goes redder, but if we get blue then it becomes some kind of purple.
+
+We're going to make it just a little bit red.
