@@ -12,7 +12,7 @@ I just found that we can display the fps and realized that we've been running at
 
 thanks to this reddit link, I know how to set the fps, for that go to the console.
 
-t.MaxFps 60
+t.MaxFps 30
 
 <!-- ! note that you have to re-set fps to 60 everytime you quit the software -->
 
