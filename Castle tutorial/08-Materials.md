@@ -51,3 +51,13 @@ The default is black, but I can go to the details pannel to edit the color with 
 I tried to look for the parameter but I forgot to select the vector3 node, you really need to select the node for the right details mode to appear.
 Remember that there are two vertical bars, one is for the saturation and the other one is for the value. For any change to be visible at the end, you need
 to make sure that the value is changed, even if you click on ok, because the saturaction is reset everytime you go out of the window.
+We can connect one of the outputs of the node to the main node. We're going to connect the white to Base color. There are a lot of things you can do with the edges (Les traits) but so far I don't know the controls so I wait and use ctrl + z to cancel my actions in case of a mistake.
+
+Now I go back to the main viewport and drag my material (in MyStuff) onto the unreal engine object, and it gets this nice shade of pale green.
+There was a difference between my material and the material from the tutorial, in the tutorial the effects didn't apply directly. That's because you need to compile the changes by applying it. It so happens that I hit save and so that includes the applying apparently.
+The apply button is on the top bar of the edit window, right between the browse folder icon and the Search button.
+Apparently there is something going on with the switch tab button, ctrl + tab, and the save button. Indeed when an edit tab is saved, it is not included in the tab list anymore. That means the list only contains the currently "active" tabs, which means the tabs with unsaved actions in them.
+
+Now we are going to edit the roughness channel instead of the color.
+
+Roughness is a value between 0 and 1, for the smoothness of the material. 0 is really rough and 1 really smooth.
