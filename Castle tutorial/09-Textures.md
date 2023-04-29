@@ -41,3 +41,17 @@ Without the normal map, the tile texture looks like plastic, it has no depth. Th
 
 If we go to add and add a point light (remove grid for seamless moving), then we can see that there are shadows. Let's try again without the normal map.
 By comparing screenshots, the difference between with and without the normal map is quite obvious.
+
+Now we want to arrange the tiling because it is too small it seems.
+
+We're going into the graph section to add a texture coordinate (search for coordinate)
+It will enable us to change the scale of our textures.
+
+We can connect this node to the 3 nodes of textures (We connect the edge to the UV input of the node, on the left), but nothing happens.
+For it to work we need to add a multiply node. The shortcut for it is left click + M, because m like multiply.
+Now we cut the edges between the text coord and the 3 textures, we can click + Alt the point where the 3 edges meet, the output of the textcoord, to remove all three.
+
+But that is just the scaler, we also need a 1 scalar to set the actual value. To span it, remember hold 1 and left click.
+In the scalar, if we select 1, we get the normal version, but if we select 0.5, we get something larger.
+
+This is very nice. It's not that easy to see at first but if we go to lower values to get real bigger values, then it's really obvious, it is larger. Let's follow the tutorial at 0.5
