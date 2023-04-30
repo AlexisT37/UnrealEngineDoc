@@ -50,3 +50,22 @@ Now if we want to duplicate the crate, we notice that duplicates will have the m
 We can go into the crate editor by double clicking and in the editor view, top right, there is a place for the default material.
 
 Details > Material Slots > Element 0
+
+The WoodCrate_MetallicRoughnessOcclusion is interesting and we need to focus on it.
+it combines several different masks into one texture using rgb
+since color is made of rgb, you can take individual channels and hide masks inside of them.
+for instance, red is the metallic nais, green is the roughness, blue is ambiant occlusion.
+Although we won't use ambiant occlusion, it's interesting to know that you can hide different masks inside one texture.
+Because this texture will actually be used as a mask, we want to edit it and uncheck srgb.
+
+If we look at the texture itself, we can see, by disabling the different color channels, that it has special properties for each channel.
+
+We can edit this texture by creating a brand new material, name it maskexample
+
+in this material, we assign normal to normal, and the base color to the base color.
+
+What's interesting though is that just like the other texture, this one has an output but also an r outptut, b output and g output
+
+Since the Red is associated to the metallic as we said, and the green is associated to the roughness, we only have to connect the red output to the metallic input of the main node, and the green output to the roughness input of the main node.
+
+This way we have a single texture that does the work of two textures.
