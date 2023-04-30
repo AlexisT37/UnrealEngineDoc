@@ -32,3 +32,21 @@ We move this instance into the WoodenCrate folder.
 If we apply the material to the plate, it's obviously going to have the texture of the floor and we don't want that.
 we go to edit the material, and activate color, normal and roughness.
 We start by dragging the base color, the normal and the roughness into the right texture slots.
+
+we are going to use the metallic parameter that we created in the master material, because there is a metallic element in the crate object (the nails), then we can activate the property and load the metallic nail texture.
+
+The texture we want is WoodCrate_Metallic
+
+Now by using ctrl + L to control the light, we can see that the nails are indeed reflecting the light.
+
+This is very quick and this is why we made the master material, because just like a php class, it allows us to set property more easily.
+
+You can of course change the other properties of the crate according to the master material, for instance I'm going to increase the normal map effect a little bit.
+
+If you want to use a texture and it looks messy, remember that it's probably because the size is not the correct one, which means you need to set it to 1.
+
+Now if we want to duplicate the crate, we notice that duplicates will have the material, but if we do a box from the content drawer, then it won't have the material.
+
+We can go into the crate editor by double clicking and in the editor view, top right, there is a place for the default material.
+
+Details > Material Slots > Element 0
