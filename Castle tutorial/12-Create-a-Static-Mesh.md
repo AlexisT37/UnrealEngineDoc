@@ -15,3 +15,20 @@ If you get the following message
 ignore it it's fine.
 get into your crate and save it, or from a right click save it.
 damn, the size of the crate compared to the UE prop made me realize the prop is actually pretty large.
+
+After having imported the crate, it's time to use a material, and for that we are going to need the help of our master material.
+It has everything except the textures, which we will import via the asset drawer.
+All > Content > Mystuff > WoodenCrate
+put the 5 texture files in there.
+WoodCrate_BaseColor srgb was on, we turned it off
+WoodCrate_Metallic sgb off because it is a mask
+WoodCrate_MetallicRoughnessOcclusion
+WoodCrate_Normal, srgb was already off, which is good, also texture group normal map, and compression settings is also normal map
+WoodCrate_Roughness srgb was on, we turned it off
+
+Now we right click on the master material, and we create a material instance from it.
+MI_WoodenCrate
+We move this instance into the WoodenCrate folder.
+If we apply the material to the plate, it's obviously going to have the texture of the floor and we don't want that.
+we go to edit the material, and activate color, normal and roughness.
+We start by dragging the base color, the normal and the roughness into the right texture slots.
