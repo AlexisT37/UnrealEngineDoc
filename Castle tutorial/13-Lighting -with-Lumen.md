@@ -48,3 +48,29 @@ Note that this doesn't open a new window, it adds a new tab next to the details.
 
 Before tweaking the settings, we get rid of the light map
 Lightmass > Advanced > Force No Precomputed Lighting should be check, it was unchecked.
+
+There is a warding message, we select ok.
+
+Don't forget to rebuild the level.
+
+Now the good lighting is gone and there is only the pitch black shadows.
+
+We go to the PointLight details and we set the Mobility to Movable instead of Static.
+
+If we move the light, there are only the pitch black shadows that are moving.
+
+We can see that if the reflection uses lumen, the lighting does not. Let's use lumen for lighting now.
+
+Go back to the post process volume details, Global Illumination, and in the method select Lumen.
+
+And now, without rebuilding, we have a perfectly good lighting that is dynamic, softer, and with the right color bounces.
+
+This is something that is totally amazing and was not possible with Unreal Engine 4.
+
+We can adjust the settings, for instance going to the PointLight details and then Light > Source Radius, if we increase it from 0 to 40, we get a much smoother shadow, which is even more realistic.
+
+Another awsome new addition that was not possible with UE4 is that now you can apply lighting to a material, so we can make our ball a source of light.
+
+All > Content > LightingExamples > Materials > M_Emmisive_Inst
+
+This makes the surface emmit light, it works on the sphere, the cylinder, or anything.
