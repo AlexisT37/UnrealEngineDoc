@@ -33,3 +33,19 @@ Build > Lighting quality > Medium
 
 While we're at it, we're going to go to the postProcess volume and change the intensity of the bloom because right now it is too intense.
 The bloom intensity will be set to 1 and the exposure compensation to 12.0
+
+Now let's opitimize the rendering because the quality of the rendering depends on the quality of the textures. Since our textures are bad for now, then the lighting will be bad too. To increase the quality of the lighting through the textures, we go
+Lit > Optimization Viewmodes > Lightmap Density
+This will show you some kind of wierd blue and green appearance in the viewport.
+
+The color grading is made to represent the quality, blue is to small, green start to be ok, we want ideally to get into the reddish range.
+
+In order to increase the resolution of a static mesh, we select an object
+Then we go into the details pannel, and over at Lighting, check the Overridden Light Map Resolution parameter.
+Then we can change the resolution, here for instance the floor is at 64, let's increase it to a greater power of 2, let's say 256.
+256 increases the quality clearly because the floor(unselected) becomes green, but we want to go even further so let's try 512.
+It's still a green, but a bit yellower.
+
+That's ok for now. Let's do the same for the walls because they are still blue.
+Nice, the walls become yellow.
+Lastly let's do the roof.
