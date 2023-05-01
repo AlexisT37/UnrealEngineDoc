@@ -66,3 +66,26 @@ Ambiant Occlusion > intensity from 0.5 to 0.
 Then to compensate we could change the exposure compensation again but frankly it's fine at 12 by me.
 
 We need to change one last thing before having our ideal baked lighting.
+That's the reflections ! I didn't notice it but we don't have reflections in our current build, and in lumen they are calculated automatically, but here we will have to specify where we want them to be.
+
+We're going to add a new object called a sphere reflection capture.
+This object is in Add > Visual Effects > Sphere Reflection Capture.
+
+The radius of the sphere is HUGE, we need to reduce it greatly so that it fits into the room.
+
+Or maybe not, there seems to be an inner sphere and an outer sphere.
+
+no the size seems to be about right according to the tutorial.
+
+We're going to set a second sphere with a smaller radius on top of the small items.
+The Influence Radius for this second sphere will be 500, compared to the previous 3 000.
+
+Finally, let's build the reflection captures
+Build > Build Reflection captures.
+
+And now we do see the reflections.
+Unreal Engine knows that it has to take the sphere with the smallest radius when there are overlapping sphere, and so our little sphere above the items is selected for their reflection.
+
+At the end, I can see why one would select this type of lighting, because especially the soft shadows that I like, the ones that were in Oblivion with clutter objects for instance, the pots, ect, they had no shadow ! I know that with this kind of technology it would be supper  convincing. But then if they moved it wouldn't work anymore lol, that's why in my opinion I prefer lumen, because it's all about motion, static scenes don't interest me.
+
+We can compare the results by switching between the two levels, and indeed there is a big difference.
