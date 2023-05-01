@@ -49,3 +49,20 @@ It's still a green, but a bit yellower.
 That's ok for now. Let's do the same for the walls because they are still blue.
 Nice, the walls become yellow.
 Lastly let's do the roof.
+Floor is actually 1024.
+We also did a couple of other elements, but no need to list everything, it's just an increase of Overridden Light Map Res in a power of 2.
+
+Then we build all levels.
+
+We note that here it takes a looooooong time to build, which is why lumen is so good because we don't have to calculate the lighting like that every time we make a change.
+
+The shadows are so gooood now ! Unreal sensei thinks it's a bit to pronounced but for me it is really good.
+
+Let's now change the ambient occlusion still because it's good to learn where it is.
+
+We need to check it to override and then set the value to 0.
+
+Ambiant Occlusion > intensity from 0.5 to 0.
+Then to compensate we could change the exposure compensation again but frankly it's fine at 12 by me.
+
+We need to change one last thing before having our ideal baked lighting.
