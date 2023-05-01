@@ -29,3 +29,21 @@ We'll set temperature to uncheckd for now.
 Let's move on with the light color
 
 it of course gives us a color picker to change the color of our light.
+
+We put it back at white, and then check the indirect lighting intensity, whose base value is 1.0
+if we set it to 0, then we have no bounce and the light looks just like at the beginnig.
+
+the room quickly becomes super bright if we increase the value, because it keeps bouncing and bouncing.
+
+Now we are going to delete our point light and create a new type of light, the spot light.
+
+The spot light is a cone, and we have a wireframe to help with the angle.
+
+You can change the direction the light is pointing by rotating it.
+
+We have two new settings, the inner cone angle and the outer cone angle.
+
+This is because there is two levels of the lighting, and there is a falloff, a smoother edge to the lighting, if the outer cone has a larger radius.
+If the outer cones get lower and lower, it will eventually bring down the inner cone with it, and that just gives a smaller cone overall. Also once the inner cone and the outer cone have the same radius value, then the cone is very sharp.
+
+Let's delete that and go into the rectangle light.
