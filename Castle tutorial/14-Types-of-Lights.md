@@ -47,3 +47,18 @@ This is because there is two levels of the lighting, and there is a falloff, a s
 If the outer cones get lower and lower, it will eventually bring down the inner cone with it, and that just gives a smaller cone overall. Also once the inner cone and the outer cone have the same radius value, then the cone is very sharp.
 
 Let's delete that and go into the rectangle light.
+
+Now we are similar to the spotlight except we are emmiting for a rectange in a specific direction, much like a tv or a projector like in kindom hearts gummi ship
+
+Notice that you can't scale this object.
+
+However, I can increase the size of the rectangle by increasing the width.
+Source width and source height for the size, then there is the parameter of the barn door angle and the barn door length.
+The barn angle extends the light like a fan, and the length makes the surrounding of the light, just like horse blindes, larger.
+The larger the barn, the larger the surrounding shadow around the light source.
+
+Now we move on to the most used light, the directional light.
+At first we don't see anything, because it is the sunligth and we have to move it and rotate it to see the effect.
+It is very bright, and pointed in a specific direction infinitely.
+
+You can change the source angle to control the edges of the shadows, lower values for smoother edges, higher values for smoother shadows.
