@@ -62,3 +62,37 @@ At first we don't see anything, because it is the sunligth and we have to move i
 It is very bright, and pointed in a specific direction infinitely.
 
 You can change the source angle to control the edges of the shadows, lower values for smoother edges, higher values for smoother shadows.
+
+Let us finish with the skylight.
+Again, nothing, like the sun ligth, but it's normal, it's because it captures the sky and then projects it as light onto the world.
+It's then normal that we don't have anything because so far our world doesn't have any sky.
+
+Let's add a sky then ! We go to the create button, and then in Place actors, Visual Effects > Sky Atmosphere.
+
+Still nothig, because we need the sunlight, so let's add a directional light again.
+
+In our case we get the sky in the discance, but we do get something.
+
+If the sunlight doesn't work even if present, we can go into Light > Affects World, and turn it off and on again.
+
+Then we can move the sky light inside of the box, and again for each light, if it doesn't seem to be working, don't be scared to turn it off and on.
+
+Now we have the sky light inside the box.
+
+If we block the path to inside the room with a cube, then the light does not penetrate the room.
+
+Now let's delete all light sources.
+
+and add a simple point light.
+
+We decrease the intensity to 4. We notice that there is a lot of noise, especially in the shadows.
+
+We are going to correct that with the settings of the post process volume.
+
+Make sure that infinite extent (Unbound) is turned on in the Post Process Volume Settings, because it needs to affect the whole level.
+
+get to Global Illumination > Lumen Global Illumination (make sure Lumen is turned on)
+let's review the settings
+
+We're going to check the Final Gather Quality and set it to 4.
+It says that it reduces the noise in light render, but it uses gpu a lot.
