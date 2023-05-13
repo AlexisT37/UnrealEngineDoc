@@ -58,4 +58,36 @@ This is weird, when I added the directionnal light a checker ground was supposed
 If you are upside down, then the Z axis will point down, as it is supposed to point up normally, that was the case for me. When I looked down in order to to a 180 degrees like a looping with the camera, it set everything right.
 
 You should never have to find anything, let's say: I want to plunder that ayleid ruin because I need welkynd stones because I need mana.
-You should ALWAYS have a way to extract resources from something close by
+You should ALWAYS have a way to extract resources from something close by.
+
+Then we are going to add a cube temporarily to help us figure out the shadows and lightings
+
+No we don't want dark horizons, we want a sky. Let's go.
+Add > Visual Effects > Sky Atmosphere.
+
+As I lower my sun with ctrl + L, youcan see that the sun goes down and the skyl gets orange like a sunset.
+
+Now we still have to problems, we have the up horizon but the down horizon is still dark, also our shadows are very pronounced.
+
+We are getting light from the sun but we need lighting from the sky so it looks more natural.
+
+Add > Lights > Sky light.
+
+Note that there is the message that lighting needs to be rebuil in red! we'll rebuild later, let's see if it is mentionned in the video.
+
+In the details of skylights, we need to check real time capture and make sure it is turned on.
+Real Time Capture > false by default, needs to be true !
+
+We also need to go into the Mobility setting and set it to moveable.
+Both these settings are for the SkyLight, you can select the skylight in the Outliner on the top right if you are lost.
+
+Now to solve the black void problem, we go to
+Add > Visual Effects > Exponential Height Fog
+We put it underneath the map because it's more practical, and we remember that we can change the distance by moving the widget: if we move it down we have less fog but if we move it up we have more fog. Don't be affraid to zoom in (use the mouse wheel to increase the camera speed), to see the effects.
+
+We're going to leave it in the middle, a bit above the ground.
+
+Note that when a widget with the arrows goes below a surface, then it becomes a bit grey.
+
+Good news, the scene is pretty much good now, and apparenttly this is how you do for 90% of open world scenes.
+
