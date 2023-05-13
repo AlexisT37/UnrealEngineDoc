@@ -91,3 +91,28 @@ Note that when a widget with the arrows goes below a surface, then it becomes a 
 
 Good news, the scene is pretty much good now, and apparenttly this is how you do for 90% of open world scenes.
 
+If I control the ligth with ctrl + L, then we can see the lighting interacting with all the different objects.
+
+Now let's get down to business, we're going to go into the landscape editing tool with shift + 2.
+But before that we save all and we go to Build > Build All the levels.
+
+With the mouse in landscape mode, we can sculpt and erase the terrain. The way it works is that sculpting lifts up the terrain like a mountain, and it creates a higher mountain the longer you hold the left click.
+
+When you hold the left click in erase mode (eraser icon), it errase the height data and returns the height to basis.
+
+note that it does that according to the ground here, so if I put a cube and turn it into a wall, it's going to sculpt the ground terrain and not the wall, also the terrain will clip into the wall.
+
+If you hold shift and then left click you lower the terrain, it can go even below the ground.
+We can create giant holes in the ground and it's not a hole that pierces the ground, it's a deformation of the ground !
+
+In the landscape sculpt settings, you can change the settings.
+Tool Settings > Tool Strength, and that will give more strength to the mountain or hole making.
+As always, you can turn back the setting of your choice to default by clicking on the counter clockwise arrow.
+
+The fallof is how the sculpture is going to look sharp or not, with no fallof, you create something that's almost a cylinder raised out of the ground, and with a lot of fallof, it is a lot smoother, like a mountain.
+
+Dvorak is sweet for shortuts here, to increase the brush size, you can use the ] key on your keyboard, [ to decrease.
+
+You can use the smooth option to make a sharp cylinder better.
+
+The flatten tool with, regardless of the original height of the ground, flatten the current area. The height where it flattens to will depend on your first click, and the camera angle of course.
