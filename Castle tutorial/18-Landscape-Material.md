@@ -25,3 +25,19 @@ For the tutorial, the rust texture is used for the dirt, it's called T_Metal_Rus
 
 We hook up the textures to their respective rgb inputs (RGB is the top one, and it's in white)
 Then we hook the output of the LandscapeLayerBlend into the base color input of the main node, which bears the name of the material, M_Landscape
+
+We save everything.
+
+In the Viewport, we go to the details, because we can't just drag and drop the material onto the landscape.
+Instead we select our material in the landscape material section.
+Landscape > Landscape material, then we go to the content drawer and we left click to select our material, and then we click on the little arrow that points left. That will apply our material to the landscape, now it's all shiny black, weird.
+That's because Unreal Engine is not picking up any layers, so it defaults to black. We're going to have to manually apply those layers.
+
+Now we are going to do in landscape mode, and there is a set of 3 tabs right above the various landscape tools, Manage, Sculpt, and Paint, we go to paint and now we can select our layers.
+
+Now we have an error message that says that This layer has no info assigned yet. You must create or assign a layer info before you can paint this layer.
+Right next to the layers, click on the add button (it's a plus +) and select Weight-blended layer (normal). It's going to create the new arborescence for us
+All > Content > MyStuff > Maps > LandscapeExample_sharedassets
+The default name is going to be Grass_LayerInfo, we leave it as default.
+And then suddenly, our map becomes all grassy.
+We repeat the step for the dirt, it's name will be Dirt_LayerInfo
