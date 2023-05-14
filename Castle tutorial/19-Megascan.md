@@ -49,3 +49,12 @@ there are 3 heavy files, the texture, and the material itself is very small.
 Oh ! I wanted to drag and drop the texture but then unreal engine crashed, I sent the logs.
 I launched unreal again, then applied the texture and this time it worked.
 Now the brick material is pretty much the same as the former material, but now there is a special parameter which is called Global.
+Global is going to control the tiling of the texture.
+Inside the global, there are 4 parameters, the tiling and the offset, for x and y.
+The tiling allows to stretch or squeeze the texture according to the axis, and the offset allows to roll the texture like a sliding ad.
+You can also use the rotating angle to rotate the texture.
+values change the angle in quarters of 1, so 0.25 will rotate the texture perpendicularly.
+You can reset values with the counter clockwise arrow, and then the arrow at the top of the section appears, which allows you to reset every value at once.
+Tip: You can jump to the location of the object material by clicking on the magnifying glass + folder in the detail of the object.
+You can use ctrl + B to jump to the object location.
+Now that we know how to handle the megascan texturing, let's go into the foliage.
