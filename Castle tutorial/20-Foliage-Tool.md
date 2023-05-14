@@ -22,3 +22,6 @@ There is a little option to change the LOD, so we can see what if the far away v
 The billboar corresponds to the 4 version, which is why it's called billboard.
 We see that the main material and the billboard material are very distinc when we try to change the main material color and zoom out, in the billboard version, the ferns still have their green color.
 Now that we have messed with the foliage itself, we can go and check the foliage editor.
+
+If we go into the foliage mode now, with shift + 3, then we go automatically to the paint mode, and then we can see at the bottom that our 3 ferns appear. This is because when we import foliage via the megascan, unreal is smart enough to realize that since it's foliage, we're probably going to use it in the foliage mode and then paint it.
+This is called the foliage type. Of course, if some foliage you want to paint is not present in the foliage type list, then you can simply drag and drop it from the content drawer.
