@@ -78,3 +78,4 @@ Let's do the very same for the dirt now, copy the 3 nodes. Note that the graph w
 Now the problem with this is that now the size slider controls both the grass and the dirt simultaneously, and we want to control them independently.
 That's because the material name is exactly the same and so it is merged into the instance. To avoid that, we simply give the parameters a different name.
 Let's set the name in the details of the node on the left.
+For the dirt, we only need 1.3 and we're good, it works.
