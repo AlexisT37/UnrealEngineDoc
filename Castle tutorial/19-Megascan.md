@@ -34,3 +34,18 @@ So I have a second material, duplicated from the first one, with crazy value, an
 I also set the roughness to 0 so now it's really shiny.
 We can also change the normal map effect, I'll see what happens if the normal map is set to 0.
 Yay, if we turn the normal map to 0, then we have a very shiny emerald rock.
+Now we are going to check the surface material, we are going to edit the cube maybe.
+Let's turn our cube into a slab and then we will apply a decorative brick wall texture, but first we are going to decide the quality of the asset we want to import.
+In the detail view of the asset, at the bottom left of the options, next to the download button (green with arrow down), there is a dropdown menu with several possibilities.
+low 1k
+medium 2k
+high 4k
+highest 8k
+Qualities possibilities that we need to assess what we want to use.
+8k is really pushing it, we're going to go for 4k high.
+Once the download is finished, we can click on the add button and it gets us to the content drawer exactly where our material was downloaded.
+The path is All>Content\Megascans\Surfaces\Decorative_Brick_Wall_vi0lbih
+there are 3 heavy files, the texture, and the material itself is very small.
+Oh ! I wanted to drag and drop the texture but then unreal engine crashed, I sent the logs.
+I launched unreal again, then applied the texture and this time it worked.
+Now the brick material is pretty much the same as the former material, but now there is a special parameter which is called Global.
