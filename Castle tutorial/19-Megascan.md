@@ -28,3 +28,9 @@ Let's start by undocking the material so we can see what happens in real time wh
 We're going to start with albedo (Witcher vibes)
 Details > 01 - Albedo
 The Albedo Tint is disabled by default, but if we check it and use the color picker, then we can change the color of the rock at will.
+Now we need to be careful, because there doesn't seem to be a way to cancel changes to an asset, so we're going to make a copy of it. We need to remember to assign the material to the rock. It's ok though, if there is a problem then we can just delete the rock and delete the two folder and then get the rock again from the quickscan bridge.
+Here I took the liberty to change the material because I want to practice not needlessly corrupting downloaded assets.
+So I have a second material, duplicated from the first one, with crazy value, and it's sparkling hulk green.
+I also set the roughness to 0 so now it's really shiny.
+We can also change the normal map effect, I'll see what happens if the normal map is set to 0.
+Yay, if we turn the normal map to 0, then we have a very shiny emerald rock.
