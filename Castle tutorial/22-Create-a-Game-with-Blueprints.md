@@ -74,3 +74,27 @@ In the same way, we have our panic button in case we mess up the display, we go 
 BLESSING, since I am always affraid of messing up the interface, I can always go back with this.
 If there is a subwindow or a tab that you don't think is useful, you can always use the scrollwheel button click to remove the window.
 A good example here is the Compiler Result, but oddly enough it is not present here for my unreal enginge, probably because of some update. We could find it using the window menu, and then in the Graph Editor it is there, we jus need to check it. If we click on it with the scroll wheel it dissapears.
+
+Let's go to the jump button part of our graph.
+We have a subsection in the graph that is named Jum input - jump can be configured in the CharacterMovementComponent
+In this subsection, we have 3 nodes, with one red node on the left, named EnhancedInputAction IA_jump
+on the right we have two blue nodes, one named Jump, and one below named Stop Jumping.
+The red node has 7 outputs and 0 input, the 2 blue nodes have 2 inputs and 1 output.
+The red node has
+triggered
+started
+ongoing
+canceled
+completed
+action value
+input action
+
+the blue nodes have inputs 
+arrow symbol white
+target (self)
+
+output: blace arrow symbol.
+it seems the black vs white arrow symbol is to signify whether the output/input is connected to something or not
+the red node is connected via the triggered output to the arrow input of the upper right node jump
+the completed output of the red node is connected to the Stop Jumping node via the arrow input
+
