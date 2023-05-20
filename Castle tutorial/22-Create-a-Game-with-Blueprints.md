@@ -89,7 +89,7 @@ completed
 action value
 input action
 
-the blue nodes have inputs 
+the blue nodes have inputs
 arrow symbol white
 target (self)
 
@@ -98,3 +98,55 @@ it seems the black vs white arrow symbol is to signify whether the output/input 
 the red node is connected via the triggered output to the arrow input of the upper right node jump
 the completed output of the red node is connected to the Stop Jumping node via the arrow input
 
+We notice that there is a difference between our subsection and the subsection in the tutorial.
+In the tutorial there is another set of 3 nodes, which are not present in our version.
+However, we are able to jump anyway, so maybe these three nodes where added by unreal sensei or maybe they were streamlined to be merged into the already existing nodes.
+We're going to find out what these do by moving forward in the tutorial.
+
+Let's test again: we can indeed jump, so it must be working properly.
+
+we're going to add a player start in our level, this is where the player spawns when we click play.
+Add > Basics > Player Start
+
+We put the player start on top of the brick wall, looking toward the mossy rock.
+
+Now we are going to do some fancy debugging, we are going to have the player act in the viewport and see the blueprint flow at the same time.
+We start the viewport and make sure the graph and the viewport can be seen at the same time, then we select the debug mode on the top right of the screen.
+Then in the graph toolbar at the top, we go to folder selector bar, should be at no debug selected, and we select the one we are currently in which is
+BP_thirdPersonCharacter0(spawned), the spawned should be the one we are using right now logically.
+
+It's interesting to note that while we are playing, the whole graph is circled in yellow.
+when we jump in the viewport, we see some flow activated on the edges bettween the graph, first between the red and the jump, and very quickly after between the red and the jump stop.
+it goes Thick bright orange/red, then thinner yellow, then back to gray.
+Whatever node in our graph that is being activated will have red/orange versions of the edges, so if we move or turn the camera, the corresponding edges light up.
+
+Now that we see how the graph basically work, we are going to add a functionnality. We are going to make it so that when we press F, the character ragdolss just like in gta 5.
+We want to right click to add a node, and we are going to type keyboard F and that will find the event listener for the F key being press.
+This node is under the sub category keyboard events.
+
+We are going to check if the node F works by creating a resulting node, print screen, so that when we press F it is going to print something on the screen I suppose.
+To connect the nodes, we drag and drop from the input arrow to the output arrow.
+remember, alt + click to remove the edge.
+
+the initial string was Hello but we are changing it to Event was fired!
+There a development only section in this node, and we can decide whether we want to print to screen, to print into the log, the text color, the duration of the display, and the key but I don't know what the key does. After looking at the tooltip, if we add C, then pressing the C key will have the same effect. I can see that this could be useful to quickly add 2 possible inputs to a key, like we see in many action games.
+We set the text color to orange with unrealSensei, but I manually edit the RGB to set it to basic RED.
+Now we jump back into the viewport and we can see that the message the event was fired! appears in red on the top left of the screen.
+It will do it as many times as we press the key even if we go very fast.
+Now US deleted the node but I'm going to leave it, we'll see if we can connect one input to many outputs.
+I could get my node and then connect the edges, but instead I'm going to drag and drop to nothing, and it will get the menu automatically for a new node, and then we can select our node.
+
+Aha, interesting, we can' connect our nodes the way we want, with a one to many relationship, maybe because of the sequencial nature of C++ like many other languages ? But instead we can definitely have a sequence where we have our other event and then we have our message.
+
+Now here is how it happens: we have our initial node connected to the print, and we get our mouse from the output of the F and drag it into nothing, and instead of making a new node directly, it's going to insert the node BETWEEN the F node and the print node.
+
+We have a Mesh node, representing the mesh of our character, and we also have the actual event node which sets the collision to enable.
+We went to check in the viewport, the message was there but no collision change, perhaps we need to add more layers.
+Now the mesh component is connected by default, but if we wanted we could have fetched it from te component window, by drag and dropping it into the graph.
+it's the mesh(characterMesh0).
+We need to se the collision to collisionenabled query and physics for the collison to change
+I was thinking maybe the no collision enables noclip, but it's still not that. For now no collision really seems to do nothing.
+
+Simulate physics in the Set simulate physics node should be checked to turn it on.
+
+In the physics blend weight (mesh), you should set the Physics blend weight to instead of its default value of 0.
