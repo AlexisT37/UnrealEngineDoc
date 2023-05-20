@@ -32,4 +32,3 @@ It's better overall to use ctrl because for shift + h to work you need to have t
 Now we look at all the different levels of quality, and we compare between lod and nanite. We can hit ctrl + E to go into the edit mode, where we transition between the lod details.
 Notice that we can manually go and activate nanite for our asset, and that nanite automatically generates polygon. It is detached from the initial amount of polygons in the origal mesh, nanite will work, and you won't use the low poly count version of the far away lod.
 If we look at our little mossy rock, we see that the number of polys decrease as we get further, from 3000 and something to 700 and then 300, but if we use nanite, we always stay at 3000 polygons no matter the distance, and we can see it when we use the wireframe view with alt + 2.
-
