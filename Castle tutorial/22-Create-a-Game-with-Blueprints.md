@@ -52,14 +52,25 @@ The "_Simple" suffix on the mesh files typically indicates a version of the mode
 
 Here are some possible differences:
 
-1. **Polygons**: The "simple" model could have a lower polygon count, making it less detailed but also less resource-intensive to render. This can be useful in scenarios where performance is more critical than visual fidelity.
+1. ***Polygons***: The "simple" model could have a lower polygon count, making it less detailed but also less resource-intensive to render. This can be useful in scenarios where performance is more critical than visual fidelity.
 
-2. **Textures**: The "simple" model might use simpler or fewer textures. For example, it could use a lower-resolution texture, or it could avoid certain effects that require additional texture maps, like normal mapping or specular mapping.
+2. ***Textures***: The "simple" model might use simpler or fewer textures. For example, it could use a lower-resolution texture, or it could avoid certain effects that require additional texture maps, like normal mapping or specular mapping.
 
-3. **Rigging and Animation**: The "simple" model could have a simpler rig (the system of bones used for animation). For instance, it might have fewer bones, making it less flexible but also faster to animate.
+3. ***Rigging and Animation***: The "simple" model could have a simpler rig (the system of bones used for animation). For instance, it might have fewer bones, making it less flexible but also faster to animate.
 
-4. **Level of Detail (LOD)**: In some cases, the "simple" version might be used as a lower LOD. Games often use lower-detail versions of models when they're viewed from a distance, then swap in the higher-detail version as the camera gets closer.
+4. ***Level of Detail (LOD)***: In some cases, the "simple" version might be used as a lower LOD. Games often use lower-detail versions of models when they're viewed from a distance, then swap in the higher-detail version as the camera gets closer.
 
 Remember to check the specific differences in your case, as the meaning of "_Simple" can vary between different assets or creators. It's always best to look at the specific characteristics of the meshes in question within the Unreal Engine editor or another 3D modeling software.
 
 Since in the tutorial, UnrealSensei selects manny, not the simple version, we'll do the same.
+
+## Event Graph
+
+The event graph contains all the nodes for our third person character.
+
+Sometimes the event graph will be closed, if that is the case you can come into event graph on the left in the My Blueprint menu, in Graphs double click on Even graph, its icon is a little graph, 3 squares with edges.
+You can change the windows just like in our main level editor.
+In the same way, we have our panic button in case we mess up the display, we go to Windows > Load Layout, default Editor Layout.
+BLESSING, since I am always affraid of messing up the interface, I can always go back with this.
+If there is a subwindow or a tab that you don't think is useful, you can always use the scrollwheel button click to remove the window.
+A good example here is the Compiler Result, but oddly enough it is not present here for my unreal enginge, probably because of some update. We could find it using the window menu, and then in the Graph Editor it is there, we jus need to check it. If we click on it with the scroll wheel it dissapears.
