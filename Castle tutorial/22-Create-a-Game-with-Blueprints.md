@@ -147,6 +147,36 @@ it's the mesh(characterMesh0).
 We need to se the collision to collisionenabled query and physics for the collison to change
 I was thinking maybe the no collision enables noclip, but it's still not that. For now no collision really seems to do nothing.
 
+So what we had to do was to add the nodes that handle the ragdoll, and I was also able to add the print node at the end, no problem
+
+For every node, there was (mesh) at the end because it references the mesh, and it goes in this sequence
+SetCollisionEnabled
+set query and output
+
+SetSimulatePhysics
 Simulate physics in the Set simulate physics node should be checked to turn it on.
 
+SetPhysicsBlendWeight
 In the physics blend weight (mesh), you should set the Physics blend weight to instead of its default value of 0.
+
+then the message print.
+
+Now here is something interesting, we can have all 3 nodes connect to the same mesh, instead of 3 different references. Here is an example of where you actually CAN have edges that come from the same input.
+
+You can double click inside an edge to set a rewire node, it doesn't do anything it's just for the sake of presentation.
+We make a cut between the simulate and the set physics blend weigth.
+
+In the debug mode, we can see that the edges go into activated mode.
+For the obstacle course we want to create, we are going to use a blueprint. For that we need to go in our content drawer, and then create a blueprint next to the third person character blueprint.
+For the type of blueprint we select Actor.
+We are going to add a Cylinder inside of it, the add button is on the top left inside the blueprint detail
+Now that we have a cylinder, we can place it inside of our world. But we also have to edit it to add a collision capsule.
+Add the Capsule Collision then drag and drop it inside the cylinder in the conponent section, NOT IN THE VIEWPORT of course. If everything goes well, the capsule collision should be a child of the cylinder.
+Then we go back to the graph and we go to the list of event on the right, we need to scroll down
+then we start from the output and we target to the third person character (the character, not the gamemode).
+We should start the drag and drop from the Other actor.
+Then we set a print string, tested and it works, it appears every time my character hits the cylinder.
+Now we want the character to ragdoll and die whenever they hit the cylinder, so we need to go back to the graph of the character and add a custom event.
+We right click somewhere above the F key node, and we select add a custom event...
+We call this event death.
+Then we connect the death event to the start of the sequence of the ragdoll, the set collision enabled node.
