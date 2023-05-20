@@ -42,3 +42,5 @@ Also, all ferns have exactly the same size and plants never have the same size.
 We go into the painting settings to the Scaling and Scale X settings, leave the scaling to uniform but set thescaleX from 0.5 to 2.0
 This way we have a nice range of fern size.
 
+If you happen to paint over a mesh, like your wall on the floor for instance, you will notice that if you move the wall then the fern is stuck to the wall. In some situations you might not want that to happen, in which case it's good to go to the Painting and then look for the checkbox Static Meshes, and make sure that it is turned off. When on, it will allow the fern to stick to the wall, and not if it is turned off.
+Not only will it not be attached to the wall, it won't even be on the wall, the ferns will avoid any static meshes alltogether.
