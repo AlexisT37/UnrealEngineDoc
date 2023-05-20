@@ -19,9 +19,26 @@ Now we're getting closer to nanite with the LOD. We notice that if we go away fr
 We can discover how the LOD is executed by going into the fern detail.
 We can see an indication of the LOD in the fern edit, with 0 if you are really close and it goes up to 4 if you are far away.
 There is a little option to change the LOD, so we can see what if the far away version looks like even though we are really close.
-The billboar corresponds to the 4 version, which is why it's called billboard.
-We see that the main material and the billboard material are very distinc when we try to change the main material color and zoom out, in the billboard version, the ferns still have their green color.
+The billboard corresponds to the 4 version, which is why it's called billboard.
+We see that the main material and the billboard material are very distinct when we try to change the main material color and zoom out, in the billboard version, the ferns still have their green color.
 Now that we have messed with the foliage itself, we can go and check the foliage editor.
 
 If we go into the foliage mode now, with shift + 3, then we go automatically to the paint mode, and then we can see at the bottom that our 3 ferns appear. This is because when we import foliage via the megascan, unreal is smart enough to realize that since it's foliage, we're probably going to use it in the foliage mode and then paint it.
 This is called the foliage type. Of course, if some foliage you want to paint is not present in the foliage type list, then you can simply drag and drop it from the content drawer.
+The paint sections contains details on the left with options about how you want to paint the specific object.
+You have parameters such as the density, the radius, etc.
+If you don't see the options, you need to click the button with a pen and click on it to make sure it is activated, when it is activated it is in blue.
+If you look closely at the 3 foliages in the asset selection to paint, you will see that there is a little checkbox in the upper left corner of the image of the fern, and this is what you need to check if you want to select that foliage to paint.
+I tried to paint and then undid it, but it works, it generate lots of ferns, this is a great way to progress quickly.
+You can  select all 3 ferns at once and paint them together, it will use all 3. When you want to erase, just click shift and erase. You can erase a specific type of fern by only selecting it for the brush, regardless of whether you want to paint or erase, the brush will only act on what fern you have selected.
+You can decrease and increase the brush size by looking at Brush Size in the Brush options of the paint. You can also hit the shortcuts, [ or ] for increase or decrease respectively.
+You can increase and increase the density between 1 and 0 to paint more or less ferns at the same time. The base value is 0.5
+You can go where the ferns are and press ctrl + A to select them all.
+Remember that if you select more ferns than one and then edit the properties, it will change the properties for all of the ferns that are selected. If you want to change the properties for only one fern, then select one and edit and then select another and edit.
+This works, the default value is 100 for 1 2 3, if I select 2 and set it to 900, then 3 and set it to 1000, they are done separately, and then if I select both and set it to 100 they both go back to 100.
+Not that there is a separate density for the brush and for the ferns, if you set max density for brush and to top it off, set 500 for ferns, then you will have a lot of ferns.
+They still look unrealistic though, so if we jump back into their material, we'll see their color variation and we can set it to 0.01.
+Also, all ferns have exactly the same size and plants never have the same size.
+We go into the painting settings to the Scaling and Scale X settings, leave the scaling to uniform but set thescaleX from 0.5 to 2.0
+This way we have a nice range of fern size.
+
