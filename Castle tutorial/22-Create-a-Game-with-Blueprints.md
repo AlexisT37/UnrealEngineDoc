@@ -26,3 +26,40 @@ There are different tabs in the edit mode of a character, and currently we are i
 we can select the event graph, the viewport and the construction script.
 In the viewport, we see that the character model is made of component just like the level.
 We can see what's looking like a camera behind our character, as well as its model.
+
+You can replicate the controls of the main viewport in the blueprint viewport, you can focus, with u (F key on french keyboard)
+you can hold alt + left mouse button to rotate around the focus and alt + right to zoom in or out.
+On the top left, we have the equivalent of our outliner on the right, which contains all of the components of the blueprint.
+if you select a component in the component sections, you still have to go back to the viewport in order to focus on it.
+Once you have selected a component, you can change its properties in the details pannel.
+
+Just like the material, we are using the female model right now and we can switch to the male model.
+To do that, we have to be careful with what we want to select in the component, we don't want to select the whole bp third person character, we want to go inside in the hierarchy and select the Mesh. This is where the mesh menu in the details will appear and where you can change the skeletal mesh asset.
+instead of SKM_Quinn_simple, select SKM_Manny_simple.
+
+## Question for chatgpt
+
+I can change the mesh I select for my character, I have manny an quinn, which are respectively the male and female model. However I have two possibilities inside these choices, two different mesh files:
+
+SKM_Manny
+SKM_Manny_Simple
+SKM_Quinn
+SKM_Quinn_Simple
+
+What is the difference between the regular mesh and the _Simple mesh ?
+
+The "_Simple" suffix on the mesh files typically indicates a version of the model that has been reduced in complexity compared to the original. This may involve lowering the polygon count, simplifying the texture mapping, reducing the skeleton's complexity, or other measures to decrease the rendering cost.
+
+Here are some possible differences:
+
+1. **Polygons**: The "simple" model could have a lower polygon count, making it less detailed but also less resource-intensive to render. This can be useful in scenarios where performance is more critical than visual fidelity.
+
+2. **Textures**: The "simple" model might use simpler or fewer textures. For example, it could use a lower-resolution texture, or it could avoid certain effects that require additional texture maps, like normal mapping or specular mapping.
+
+3. **Rigging and Animation**: The "simple" model could have a simpler rig (the system of bones used for animation). For instance, it might have fewer bones, making it less flexible but also faster to animate.
+
+4. **Level of Detail (LOD)**: In some cases, the "simple" version might be used as a lower LOD. Games often use lower-detail versions of models when they're viewed from a distance, then swap in the higher-detail version as the camera gets closer.
+
+Remember to check the specific differences in your case, as the meaning of "_Simple" can vary between different assets or creators. It's always best to look at the specific characteristics of the meshes in question within the Unreal Engine editor or another 3D modeling software.
+
+Since in the tutorial, UnrealSensei selects manny, not the simple version, we'll do the same.
