@@ -219,3 +219,33 @@ Aha ! Yes, we need to go to the variable in the graph, and check two settings
 Instance Editable check
 and
 Expose on Spawn check
+and now we can edit the variable on every different instance.
+
+Now we are going to set an end goal for the course.
+Let's add a statue to symbolise the end of the level.
+I'm going to add the sm statue, and even though us did'nt, I added a poit light because my end plateau is dark.
+We are going to set the satue to gold material.
+I added a second light by duplicating the 1st one with alt.
+We're going to add a trigger volume to the statue
+Add > Volumes > TriggerVolume.
+We want the volume to collide with the statue and being around the statue, so when we get near the statue it triggers the volume.
+Now we need to add some logic to the volume, and for that we are going to edit the level blueprint.
+Every level has its own blueprint.
+Right next to the add button for the level (cube with green +), there is a graph icon and that is the blueprint icon. Select Open Level Blueprint
+The blueprint has the name of the level, here it's gamemap.
+Now we need to remove the existing events, they are deactivated but we don't want them.
+Also we need to make sure that the trigger volume is selected before we open the blueprint.
+What is good with the selection of the volume is that when we right click inside the graph, we get a bunch of options that are directly related to the volume, which saves a lot of time.
+We go into
+Add Event for Trigger Volume 0 > Collision > Add on actor begin overlap
+In the same vein as our death ragdoll event, we want to make sure that the overlap is triggered relative to our third person character specifically, not anything else.
+drag output to graph and then search for third person, you will get
+cast to bp_thirdpersoncharacter.
+Be sure to select the character and not the gamemode.
+Again, to make sure that the event is working, we want to associate a print string with the event.
+It's not working so far, I must have forgotten something, let's check the video.
+Hoho, it seems that it should work, so there must be something wrong I did, let's try to troubleshoot.
+It could be that  I did the wrong input output for the node onActorBeginOverlap,
+in my case it is between overlappedActor and Object, and it should be between OtherActor and object.
+let's fix it and then test again.
+It works ! Let's goooo
