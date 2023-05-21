@@ -268,3 +268,4 @@ In this create wid8get node, we can choose the class so we select the winscreen 
 Since by default the winscreen is hidden, we can't just attach it we have to show it as well.
 For that, we add another node to the output of the create widget, and we search for "viewport" which gives us add to viewport.
 Now remember to not repeat the mistake from earlier, check carefully where is the output and where is the input, I was off again, you have to start from the output return value of the Create Win Screen Widget node, but I started from the regular arrow output.
+Now the final step was te make sure the character could not avoid the obstacles by flattening the platform around the obstacles, making the plateform thinner, but my obstacle course made it already impossible to avoid the obstacles so I was good. That's it for our first obstacle course video game in unreal engine.
