@@ -209,3 +209,13 @@ I can see the blue arrow on the stopped version, but I can't see it when I play 
 Ooooh I misunderstood the point of the arrows, they're NOT visible to the player in the simulation, it's just for me. Well I was talking about a way to guess the direction of the rotation, this is actually very convenient, thanks UnrealSensei
 
 This is perfect, all I had to do was to adjust the arrow direction to match the cylinder direction in the edit view, it seems that the proper arrow is the green one when we are in local mode, and then we are good.
+
+Now we see that the rotation of the cylinder is the same everywhere, we want to have different speeds and we want to edit the speed independently for every cylinder. You gessed it, we are going to do a parameter for the speed.
+This parameter, variable for the blueprint, can be added by clicking on add on the left under the variables section. We call it rotation speed, and set the type to float. Then we can drag and drop it into our graph, and we have to choose between setting the variable and getting the variable. At first we are going to get the variable.
+Then we connect the output of the variable to the lower input of the multiplier, where it used to be 100.
+Now this variable was born of the previous hardcoded setting, so if we set it to 0 then we have no rotation at all, and if we set it to 100 we have the same rotation as before. After building and saving we can go to the viewport of the level and edit the variables independently for every cylinder.
+But waiit I got ahead of the video, actually I don't see the variable when I click on a cylinder, something must be missing.
+Aha ! Yes, we need to go to the variable in the graph, and check two settings
+Instance Editable check
+and
+Expose on Spawn check
