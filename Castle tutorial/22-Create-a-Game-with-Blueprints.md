@@ -180,3 +180,32 @@ Now we want the character to ragdoll and die whenever they hit the cylinder, so 
 We right click somewhere above the F key node, and we select add a custom event...
 We call this event death.
 Then we connect the death event to the start of the sequence of the ragdoll, the set collision enabled node.
+then you go to the cast to BP_ThirdPersonCharacter, and where the main output goes to the print string, the Add BP third person character, and this will point to death, just select it in the search, there is only one function.
+Now it's very easy to avoid the pillar, so we are going to add some difficulty to it as an obstacle course.
+
+For that we go back to the graph for the cylinder, and we look at the other nodes, specifically the event tick.
+The event tick could be absent from the graph, so in that case we can get another one by right clicking searching for event tick
+In our cylinder graph it is present but disabled, like 2 other nodes. We have eventbeginplay, eventactionbeginoverlap, and eventtick
+the event tick runs every fram, and we are going to attach it to a string print called activated.
+With that we can see the message being printed all the time, because all the cylinders are printing it every frame.
+
+We're going to add another event, call add actor local rotation.
+we have rotation parameters, we are going to select 5 for x
+Aaaaah absolutely beautiful, the cylinders rotate just like i rotate my lightsaber, and they get me when I pass, hilarious as well because even though the camera doesnt' move, they do catapult my ragdolling body to mars. I love this !
+
+Now the problem is that the rotation is frame dependent, and because of that if we change the fps, we get a much lower rotation. We should get something time dependent maybe. The command that was used to make the fps test is the same I used at the beginning before setting the frame constantly in the settings.
+t.MaxFps 30
+
+We're going back to the graph to add what is called a rotator, for that we drag the edge and search make rotator.
+Then we drag from the event tick and select multiply.
+Now the output of the multiply is going to be connected to the X input of the make rotator node, and we are going to set the multiply value to 5.
+It is insanely slow, so we are going to set the multiplier to 100 instead.
+
+So now, I'm not sure but it could seem that we get 100 rotations of 5 degrees per second.
+I did a bit of adjustment for the direction of the rotations, it's not easy to see where the rotation is looking but I did it. In the future I should try to find a way to accurately know where the rotation is facing based on the arrows. Speaking of arrows, for the player it's not easy to see where the cylinder rotation is facing, so we are going to add arrows just like the selection translation arrows but visible by the player during the simulation.
+For some reason I could not get the structure of the cylinder and I thought I hadn't followed the instruction because I could not see the components anymore, but I went to window and loaded the default window and there it was again, phiew.
+In the hierarchy, the arrow should be above the cylinder. We make it blue by setting the color numbers.
+I can see the blue arrow on the stopped version, but I can't see it when I play the simulation.
+Ooooh I misunderstood the point of the arrows, they're NOT visible to the player in the simulation, it's just for me. Well I was talking about a way to guess the direction of the rotation, this is actually very convenient, thanks UnrealSensei
+
+This is perfect, all I had to do was to adjust the arrow direction to match the cylinder direction in the edit view, it seems that the proper arrow is the green one when we are in local mode, and then we are good.
