@@ -249,3 +249,22 @@ It could be that  I did the wrong input output for the node onActorBeginOverlap,
 in my case it is between overlappedActor and Object, and it should be between OtherActor and object.
 let's fix it and then test again.
 It works ! Let's goooo
+
+Now let's make a win screen. For that we need to create a user interface.
+We go to our All > Content > ThirdPerson > Blueprint folder
+and create a new User Interface (in the right click menu, at the bottom of the menu, it's sorted alphabetically)
+We select widget blueprint
+We then get a window for the choice of type of widget, and we can select any class but we have a common choice which is user widget.
+We save and go inside of our widget, on the left there is the palette tab and the library tab, in the palette tab we select add, and we search for canvas, it gives the canvas panel. We drag and drop it into the middle screen, and it gives us a green rectangle. This will be the frame for our message.
+Then we search for text and drag the text into the screen.
+In the detail of that text, there is a parameter to change the text, we type you won the game!
+We increase the font by selecting the size parameter in Appearance > font
+Then when we select the frame outside, not the text area, there is a flower at the top left, the flower is there to help us center the image. If we put the flower in the middle of the text, it will ensure that the text is in the middle of the screen, no matter the screen resolution.
+The flower anchors the text in the middle of the screen
+then we go back to our blueprint for the widget, we remove the print screen node, and instead we are going to connect the action to our win screen.
+I don't delete the print screen in the gameMap blueprint (open level blueprint on the top next to the add option)
+and I attach the output of cast to third person chararter to "Create Widget"
+In this create wid8get node, we can choose the class so we select the winscreen widget
+Since by default the winscreen is hidden, we can't just attach it we have to show it as well.
+For that, we add another node to the output of the create widget, and we search for "viewport" which gives us add to viewport.
+Now remember to not repeat the mistake from earlier, check carefully where is the output and where is the input, I was off again, you have to start from the output return value of the Create Win Screen Widget node, but I started from the regular arrow output.
